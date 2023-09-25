@@ -36,6 +36,7 @@ const UsuarioSchema = Schema({
         type: String,
         require:[true,'Es necesario ingresar el correo']
     }
+
     
 
 })
