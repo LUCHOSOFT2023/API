@@ -35,11 +35,8 @@ const UsuarioSchema = Schema({
     correo_usuario: {
         type: String,
         require:[true,'Es necesario ingresar el correo']
-    },
-     contraseña_usuario:{
-        type: String,
-        requre:[true, 'La contraseña es necesaria']
-     }
+    }
+    
 
 })
 

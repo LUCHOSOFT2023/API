@@ -7,11 +7,11 @@ const route = Router()
 //Importar métodos del controlador
 const {categoriaGet, categoriaPost, categoriaPut, categoriaDelete} = require('../controllers/categorias')
 
-route.get('/', categoriaGet) //Listar los datos
+route.get('/',categoriaGet) //Listar los datos
 
 route.post('/', categoriaPost) //Insertar Datos
 
-route.put('/', categoriaPut) //Modificar los datos
+route.put('/',categoriaPut ) //Modificar los datos
 
 route.delete('/', categoriaDelete) //Eliminar los datos
 

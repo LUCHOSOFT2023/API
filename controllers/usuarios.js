@@ -1,5 +1,4 @@
 const {response} = require('express')
-const bcrypt = requiere('bcrypt')//Encriptar
 
 
 //Importación de los modelos
