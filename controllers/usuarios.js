@@ -1,10 +1,11 @@
 const {response} = require('express')
+const bcrypt = requiere('bcrypt')//Encriptar
 
 
 //Importación de los modelos
 const Usuario = require('../models/usuarios')
 
-//Método GET de la API
+//Método GET de la api para consultar los usuarios
 const usuarioGet = async(req, res = response) =>{
     //const {nombre} = req.query //Desestructuración
     const {id_usuario} = req.query;
@@ -25,7 +26,7 @@ const usuarioGet = async(req, res = response) =>{
         res.status(500).json({ mensaje: 'Error interno del servidor' });
     }
 }
-
+//Metodo POST 
 const usuarioPost = async(req, res) => {
     let mensaje = "Inserción exitosa"
     const body = req.body
@@ -40,7 +41,7 @@ const usuarioPost = async(req, res) => {
         msg: mensaje
     })
 }
-
+//Metodo put para modificar usuario
 const usuarioPut = async(req, res) => {
 
     const {id_usuario, imagen_usuario, nombre_usuario, telefono_usuario, direccion_usuario, estado_usuario} = req.body
@@ -63,7 +64,8 @@ const usuarioPut = async(req, res) => {
         msg: mensaje
     })
 }
-
+ 
+//codigo para eliminar usuario
 const usuarioDelete = async (req, res) => {
     const {id_usuario} = req.query
     let mensaje = ''

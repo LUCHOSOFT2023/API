@@ -6,8 +6,9 @@ const route = Router()
 
 //Importar métodos del controlador
 const {usuarioGet, usuarioPost, usuarioPut, usuarioDelete} = require('../controllers/usuarios')
+const  {isAuthenticated}  = require('../controllers/auth')
 
-route.get('/', usuarioGet) //Listar los datos
+route.get('/', isAuthenticated,usuarioGet) //Listar los datos
 
 route.post('/', usuarioPost) //Insertar Datos
 

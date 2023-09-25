@@ -1,6 +1,6 @@
 const express = require('express')// Framework de node
 const cookieParser = require('cookie-parser');//Para variables en el navegador
-const cors  = require('cors');//Implementar seguridad
+const cors = require('cors');//Implementar seguridad
 const bodyParser = require('body-parser')//Recibir datos de formularios html
 const { dbConnection } = require('../database/config')
 
