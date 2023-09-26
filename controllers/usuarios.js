@@ -43,7 +43,7 @@ const usuarioPost = async(req, res) => {
 //Metodo put para modificar usuario
 const usuarioPut = async(req, res) => {
 
-    const {id_usuario, imagen_usuario, nombre_usuario, telefono_usuario, direccion_usuario, estado_usuario} = req.body
+    const {id_usuario, imagen_usuario, nombre_usuario, telefono_usuario, direccion_usuario, estado_usuario,correo_usuario} = req.body
 
     let mensaje = "Modificación exitosa"
 
@@ -53,7 +53,8 @@ const usuarioPut = async(req, res) => {
             nombre_usuario: nombre_usuario,
             telefono_usuario: telefono_usuario,
             direccion_usuario: direccion_usuario,
-            estado_usuario: estado_usuario
+            estado_usuario: estado_usuario,
+            correo_usuario:correo_usuario
         }});
 
     }catch (error) {
