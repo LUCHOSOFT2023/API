@@ -26,6 +26,16 @@ const CompraSchema = Schema({
   total_compra:{
     type: Number,
     required:[true,'El total de la compra es necesario']
+  },
+
+  insumos:{
+    type: String,
+    required:[true, 'Agregar el insumo es necesario']
+  },
+
+  proveedor:{
+    type: String,
+    required:[ true, 'Agregar el proveedor es necesario']
   }
 
 })
